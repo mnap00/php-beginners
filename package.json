@@ -1,0 +1,56 @@
+{
+	"name": "php-beginners",
+	"version": "0.1.0",
+	"description": "Udemy course - PHP for Beginners",
+	"private": true,
+	"engines": {
+		"node": ">=8",
+		"npm": ">=6"
+	},
+	"browserslist": [
+		"last 2 versions, > 0.2%, not dead"
+	],
+	"scripts": {
+		"clean": "run-p clean:*",
+		"clean:all": "cross-env-shell \"shx rm -rf ${VHOST_UDM_PHPBGN}/*\"",
+		"dirs": "run-s dirs:*",
+		"dirs:all": "cross-env-shell \"shx mkdir -p ${VHOST_UDM_PHPBGN}\"",
+		"deploy": "run-p deploy:**",
+		"deploy:php:app": "cross-env-shell \"shx cp -r app  ${VHOST_UDM_PHPBGN}\"",
+		"deploy:php:demo": "cross-env-shell \"shx cp -r demo  ${VHOST_UDM_PHPBGN}\"",
+		"watch": "run-p watch:* serve",
+		"watch:php": "onchange \"**/*.php\" -- run-s deploy:php:*",
+		"serve": "cross-env-shell \"browser-sync start --proxy \"${PROXY_UDM_PHPBGN}\" --files \"${VHOST_UDM_PHPBGN}\" --no-online\"",
+		"lint": "run-s lint:*",
+		"lint:php": "phpcs **/*.php || true",
+		"fix": "run-p fix:*",
+		"fix:php": "phpcbf **/*.php || true",
+		"postfix": "npm run lint",
+		"start": "run-s clean dirs lint deploy watch",
+		"build": "run-s clean dirs fix deploy",
+		"test": "lint"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com:mnap00/php-beginners.git"
+	},
+	"keywords": [
+		"udemy",
+		"course",
+		"php",
+		"xampp"
+	],
+	"author": "mnap",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://gitlab.com/mnap00/php-beginners/issues"
+	},
+	"homepage": "https://gitlab.com/mnap00/php-beginners#readme",
+	"devDependencies": {
+		"browser-sync": "^2.26.3",
+		"cross-env": "^5.2.0",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^4.1.0",
+		"shx": "^0.3.2"
+	}
+}
