@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
 </head>
 <body>
 
-    <div id="navigation">
+	<div id="navigation">
 
-        <?php 
+		<?php
 
-        require "functions.php";;
+		require "functions.php";
+		;
 
-        Navigation();
-
-
-        ?>
-        
-    </div>
-
-    <div id="content">
-
-    </div>
+		Navigation();
 
 
+		?>
+		
+	</div>
 
-    
+	<div id="content">
+
+	</div>
+
+
+
+	
 </body>
 </html>
 

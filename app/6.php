@@ -2,27 +2,27 @@
 <?php require "functions.php"; ?>
 <?php require "includes/header.php";?>
 
-    <section class="content">
+	<section class="content">
 
-        <aside class="col-xs-4">
-        
-    <?php Navigation();?>
-            
-        </aside><!--SIDEBAR-->
+		<aside class="col-xs-4">
+		
+	<?php Navigation();?>
+			
+		</aside><!--SIDEBAR-->
 
 
 <article class="main-content col-xs-8">
  
 
-    <?php  
+	<?php
 
-    /*  Step1: Make a form that submits one value to POST super global
+	/*  Step1: Make a form that submits one value to POST super global
 
 
-    */
+	*/
 
-    
-    ?>
+	
+	?>
 
 
 </article><!--MAIN CONTENT-->

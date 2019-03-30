@@ -1,4 +1,4 @@
-<?php require "functions.php"; /* phpcs:disable */ ?>
+<?php require "functions.php"; ?>
 <?php require "includes/header.php";?>
 
 	<section class="content">
