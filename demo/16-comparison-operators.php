@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>16. Comparison and Logical Operators</title>
 </head>
 <body>
 
