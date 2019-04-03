@@ -30,7 +30,7 @@ if (!$result) {
 					<input class="form-control" type="password" name="password">
 				</div>
 				<div class="form-group">
-					<select id="" name="">
+					<select id="" name="id">
 						<option value="">1</option>
 					</select>
 				</div>
