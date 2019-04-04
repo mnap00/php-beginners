@@ -1,6 +1,25 @@
 <?php include 'db.php'; ?>
 <?php include 'functions.php'; ?>
 
+<?php
+if (isset($_POST['submit'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$id = $_POST['id'];
+
+	$query = 'UPDATE users SET ';
+	$query .= 'username = \'' . $username . '\', ';
+	$query .= 'password = \'' . $password . '\' ';
+	$query .= 'WHERE id = ' . $id;
+
+	$result = mysqli_query($connection, $query);
+
+	if (!$result) {
+		die('QUERY FAILED: ' . mysqli_error($connection));
+	}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +31,7 @@
 
 	<div class="container">
 		<div class="col-xs-6">
-			<form action="44-create-record.php" method="post">
+			<form action="46-update-record.php" method="post">
 				<div class="form-group">
 					<label for="username">Username</label>
 					<input class="form-control" type="text" name="username">
