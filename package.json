@@ -1,6 +1,6 @@
 {
 	"name": "php-beginners",
-	"version": "0.7.54",
+	"version": "0.8.55",
 	"description": "Udemy course - PHP for Beginners",
 	"private": true,
 	"engines": {
