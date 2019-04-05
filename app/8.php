@@ -5,33 +5,31 @@
 
 		<aside class="col-xs-4">
 
-	<?php Navigation();?>
-			
-			
+			<?php Navigation();?>
+
 		</aside><!--SIDEBAR-->
 
+		<article class="main-content col-xs-8">
 
-		
-	<article class="main-content col-xs-8">
-	
-	
-	<?php
+		<?php
 
-	/*  Step 1 -Make a variable with some text as value
+		/**
+		 * Step 1 - Make a variable with some text as value.
+		 *
+		 * Step 2 - Use crypt() function to encrypt it.
+		 *
+		 * Step 3 - Assign the crypt result to a variable.
+		 *
+		 * Step 4 - echo the variable.
+		 */
+		$plaintext = 'secret phrase';
 
-	Step 2 - Use crypt() function to encrypt it
+		$encrypted = crypt($plaintext, '$2y$07$thisisstringforsaltover22chars');
 
-	Step 3 - Assign the crypt result to a variable
+		echo $encrypted;
 
-	Step 4 - echo the variable
+		?>
 
-	*/
-	
-	?>
+		</article><!--MAIN CONTENT-->
 
-
-
-
-
-</article><!--MAIN CONTENT-->
 <?php require "includes/footer.php"; ?>
