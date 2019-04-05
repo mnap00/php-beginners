@@ -1,14 +1,7 @@
 <?php include 'db.php'; ?>
 <?php include 'functions.php'; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>51. (D) Delete Records from Database</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
+<?php include 'includes/header.php'; ?>
 
 	<div class="container">
 		<div class="col-xs-6">
@@ -38,5 +31,4 @@
 		</div>
 	</div>
 
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
