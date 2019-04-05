@@ -10,6 +10,12 @@ function create_rows() {
 		$username = mysqli_real_escape_string($connection, $username);
 		$password = mysqli_real_escape_string($connection, $password);
 
+		$hash_format = '$2y$10$';
+		$salt = 'iusesomecrazystrings22';
+		$hash_f_and_salt = $hash_format . $salt;
+
+		$password = crypt($password, $hash_f_and_salt);
+
 		$query = 'INSERT INTO users(username, password) ';
 		$query .= 'VALUES (\'' . $username . '\', \'' . $password . '\')';
 
