@@ -24,7 +24,13 @@
 		 */
 		$plaintext = 'secret phrase';
 
-		$encrypted = crypt($plaintext, '$2y$07$thisisstringforsaltover22chars');
+		$cipher = '$2y$';
+		$rounds = '10$';
+		$salt = substr(strtr(base64_encode(openssl_random_pseudo_bytes(16)), '+', '.'), 0, 22);
+		$crypt = $cipher . $rounds . $salt;
+
+		// password_hash() should be used instead
+		$encrypted = crypt($plaintext, $crypt);
 
 		echo $encrypted;
 
