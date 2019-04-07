@@ -15,7 +15,7 @@ $button = 'CLICK HERE NOW';
 </head>
 <body>
 
-<a href="59-get-super-global.php?id=<?php echo $id; ?>"><?php echo $button ?></a>
+<a href="59-get.php?id=<?php echo $id; ?>"><?php echo $button ?></a>
 
 </body>
 </html>
